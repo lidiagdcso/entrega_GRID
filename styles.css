@@ -6,9 +6,13 @@
   --border: 2px solid var(--blue-color);
   --spacing: 28px;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 /* Resto del CSS */
+.body {
+  height: 100%;
+}
 .container {
   display: grid;
   grid-template-columns: 32% 30% 32%;
@@ -30,18 +34,37 @@ header {
   background-color: var(--blue-color);
   color: var(--primary-color);
   text-align: center;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    'header-title'
+    'header-text';
 }
+.header-title {
+  grid-area: header-title;
+}
+.header-text {
+  grid-area: header-text;
+  padding: 20px;
+  text-align: justify;
+}
+
 h1 {
   text-transform: uppercase;
 }
 
 .school {
   background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d8ce469044b958508f4bdbab/blueschoolbackpackwithessentialsupplies_232148207678.jpg);
+  background-size: cover;
+  background-position: center;
   grid-area: school;
 }
 
 .student {
   background-image: url('https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9e4ce16148dd5cbeb1065410/89f80abe-6acd-d8dc-a341-3e571206975b.jpg');
+  background-size: cover;
+  background-position: center;
   grid-area: student;
 }
 
@@ -52,16 +75,20 @@ main {
   text-align: center;
   align-content: center;
   text-transform: uppercase;
+  padding: 20px;
 }
 
 .time {
   background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773a5aa425b1502aaac14708/f2b45624-c8f6-3aa0-0ee4-58adda3c89b0.jpg);
-
+  background-size: cover;
+  background-position: center;
   grid-area: time;
 }
 
 .alumni {
   background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg);
+  background-size: cover;
+  background-position: center;
   grid-area: alumni;
 }
 
@@ -69,13 +96,14 @@ footer {
   grid-area: footer;
   background-color: var(--orange-color);
   color: var(--primary-color);
-  padding: 20px;
+  padding: 15px;
 }
 
 button {
   padding: 15px 25px;
   text-transform: uppercase;
   border-color: var(--primary-color);
+  font-size: 10px;
 }
 
 .alumni,
@@ -83,4 +111,23 @@ button {
 .student,
 .time {
   background-size: cover;
+}
+
+@media (max-width: 991px) {
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(7, 25%);
+    gap: 2%;
+    grid-template-areas:
+      'header'
+      'header'
+      'school'
+      'student'
+      'main'
+      'time'
+      'alumni'
+      'footer';
+    height: 100%;
+  }
 }
