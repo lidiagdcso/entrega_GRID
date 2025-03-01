@@ -14,6 +14,9 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  border-radius: 50px;
+  background-color: rgba(211, 211, 211, 0.658);
+  padding: 20px;
 }
 /* Resto del CSS */
 .container {
@@ -27,9 +30,6 @@ body {
     'alumni footer footer';
   min-height: 100vh;
   height: auto;
-  border-radius: 50px;
-  background-color: rgba(211, 211, 211, 0.658);
-  padding: 30px;
 }
 
 header {
