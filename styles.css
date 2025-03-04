@@ -6,12 +6,11 @@
   --border: 2px solid var(--blue-color);
   --spacing: 28px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
   border-radius: 50px;
@@ -106,7 +105,7 @@ button {
   padding: 15px 25px;
   text-transform: uppercase;
   border-color: var(--primary-color);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .alumni,
